@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>x o game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+<body >
+
+<section>
+    <div class="container">
+        <!--hahahaaaaaaaaaaaaaaaaaaaaaaaaaaaa-->
+        <div id="div__hahaha">
+            <div  id="close_hahaha" onclick="close_div_hahaha()">X</div>
+            <p>ههههه مفيش العاب تانية ضحكت عليك</p>
+            <div class="icon"> <i class="uil uil-laughing"></i></div>
+            <p>#يوسف_مجدى</p>
+        </div>
+
+        <!--result part---------------------------------------------->
+        <div class="result">
+            <article class="player__container">
+                <div id="divinput1"><input id="input1" type="text" placeholder="player 1" maxlength="9" onkeydown="toatherplayer (event)" autofocus></div>
+                <p id="score1">0</p>
+            </article>
+            
+            <article class="player__container">
+                <small>=</small>
+                <p id="scoret">0</p>
+            </article>
+
+            <article class="player__container">
+                <div id="divinput2" ><input id="input2" type="text" placeholder="player 2" maxlength="9" onkeydown="change(event)"></div>
+                <p id="score2">0</p>
+            </article>
+            <button id="button" onclick="clic()">save</button>
+            <!--hahahaaaaaaaaaaaaaaaaaaaaaaaaaaaa-->
+            <button id="hahaha" onclick="open__hahaha()">More Games</button>
+            
+            
+        </div> 
+
+        <!--main game part---------------------------------------------->
+        <div class="game">
+
+                <div class="title">
+                    <span class="span" id="span1"> XO </span>
+                    <span  id="span2">GAME</span>
+                </div>
+
+                <div class="squars__container">
+
+                    <div class="square" id="item1" onclick="game(this.id)" ></div>
+                    <div class="square" id="item2" onclick="game(this.id)" ></div>
+                    <div class="square" id="item3" onclick="game(this.id)" ></div>
+                
+                    <div class="square" id="item4" onclick="game(this.id)" ></div>
+                    <div class="square" id="item5" onclick="game(this.id)" ></div>
+                    <div class="square" id="item6" onclick="game(this.id)" ></div>
+                
+                    <div class="square" id="item7" onclick="game(this.id)" ></div>
+                    <div class="square" id="item8" onclick="game(this.id)" ></div>
+                    <div class="square" id="item9" onclick="game(this.id)" ></div>
+                    
+                </div>
+                
+        </div>
+
+</div>
+</section>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+
+</body>
+</html>
