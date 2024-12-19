@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 1rem;
+}
+:root{
+    --color-bg:#f2285750;
+    --color-main:rgba(255, 34, 86, 0.973);
+    --color-white:#fff;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+background: var(--color-bg);
+}
+section{
+    
+    padding: 1rem 0;
+}
+.container{
+    display: grid;
+    grid-template-columns: 30%  70%;
+    gap: 6rem;
+    width: 85%;
+    margin: auto;
+    height: fit-content;
+    position: relative;
+    
+}
+#button , #hahaha {
+    color: white;
+    background: var(--color-main);
+    padding: 5px;
+    font-size: 2rem;
+    font-weight: 400;
+    cursor: pointer;
+    margin: 5px;
+    scale: 1;
+    transition: 0.4s;
+
+}
+#button:hover , #hahaha:active{
+    box-shadow: 0 1rem 1rem rgba(0,0,0,0.1);
+    scale: 1.1;
+}
+#hahaha{
+    font-size: 1.5rem;
+    display: none;
+
+}
+/*hahahahaha-------*/
+#div__hahaha{
+    background: #f4acac;
+    z-index: 11;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    scale: 0;
+    transition: 0.5s;
+}
+#close_hahaha{
+    color:#fff ;
+    background:#555252;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    width: 6rem;
+    font-size: 3rem;
+    cursor: pointer;
+}
+#close_hahaha:active{
+    scale: 1.1;
+}
+
+#div__hahaha p {
+font-size: 3rem;
+direction: rtl;
+padding: 1rem;
+text-align: center;
+text-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+font-weight: 500;
+
+}
+.icon{
+color: #555252;
+text-align: center;
+font-size: 10rem;
+}
+
+/*result part---------------*/
+.result{
+    background: var(--color-bg);
+    box-shadow:inset 0 0 2rem rgba(0,0,0,0.1);
+
+    height: fit-content;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    gap: 1rem;
+    
+}
+.player__container{
+    display: flex;
+justify-content: space-around;
+place-items: center;
+
+}
+.player__container p{
+    background: var(--color-main);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 40px;
+    display: inline-block;
+    text-align: center;
+    padding: 2px;
+}
+.result input{
+padding: .6rem;
+border: 1px solid #fff;
+}
+#divinput1{
+    color: var(--color-main);
+    font-weight: 500;
+    font-size: 2.5vw;
+    
+}
+#divinput2{
+    color: var(--color-main);
+    font-weight: 500;
+    font-size: 2.5vw;
+
+}
+small{
+    font-weight: 400;
+    font-size: 3rem;
+    color: var(--color-main);
+}
+/*main game part---------------*/
+
+.game{
+    width: 90%;
+    padding: 1rem 3rem 3rem;
+    height:fit-content;
+    color: white;
+    font-weight: 600;
+    background: transparent;
+    box-shadow: 1rem 2rem 5rem rgba(0,0,0,0.5);
+    display: grid;
+    grid-template-rows: 8% 90%;
+    gap: 1.2rem;
+    text-align: center;
+    
+
+} 
+.title{
+    background: var(--color-main);
+    box-shadow: inset 0 0 2rem rgba(255, 191, 191, 0.311);
+    place-content: center;
+    font-size: 2rem;
+}
+#span1{
+    color: #fa0;
+}
+.squars__container{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 1rem;
+height: fit-content;
+
+
+}
+.square{
+    background: var(--color-main);
+    text-shadow: 2px 2px 3px #00000038;
+    font-size:8.3rem;
+    width:100% ;
+    height: 12rem;
+    box-shadow: 1rem 1rem 1.5rem rgba(0,0,0,0.2);
+    cursor: pointer;
+    scale: 1;
+    transition: 0.4s;
+    display: flex;
+    justify-content: center;
+}
+.square:active{
+    background: rgb(77, 10, 25);
+    scale: 1.03;
+}   
+/*=====================media quere(tablet)=============*/
+@media screen and (max-width:1024px) {
+    :root{
+        --color-main:rgba(255, 34, 86, 0.921);
+    }
+    .container{
+        width: 90%;
+grid-template-columns: 1fr;
+gap: 2rem;
+}
+.result{
+    gap: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.player__container div{
+    font-size: 2rem;
+}
+#divinput1{
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    color: var(--color-white);
+
+    
+}
+#divinput2{
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    color: var(--color-white);
+
+    
+}
+.game{
+    width: 100%;
+    box-shadow: 1rem 2rem 5rem rgba(0, 0, 0, 0.285);
+
+}
+.title{
+    font-size: 1.8rem;
+}
+.square{
+    font-size: 8.5rem;
+}
+}
+/*=====================media quere(mobile phone)=============*/
+@media screen and (max-width:600px) {
+    *{
+        border-radius: 0.7rem;
+    }
+    .container{
+    width: 100%;
+    gap: 1rem;
+}
+.result{
+    padding: 0.6rem
+}
+.player__container{
+    gap: 1rem;
+
+}
+.game{
+    padding:1.5rem 0.5rem 
+    
+}
+.squars__container{
+    padding: 0;
+    gap: 0.6rem;
+}
+.square{
+    height: 7.8rem;
+    font-size: 6.2em;
+    align-items: center;
+
+}
+    .title{
+        font-size: 1.5rem;
+    }
+    button{
+        display: none;
+    }
+    #hahaha{
+        display: inline-block;
+    }
+}
